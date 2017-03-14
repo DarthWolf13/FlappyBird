@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -34,6 +35,14 @@ namespace FlappyBird
 
             this.velocity.Y += 20;
             this.AngularDirection = new Vector2 (100, this.velocity.Y);
+        }
+
+        public override void HandleInput(InputHelper inputHelper)
+        {
+            base.HandleInput(inputHelper);
+
+            if (inputHelper.KeyPressed(Keys.Space))
+                this.velocity = new Vector2(0, -450);
         }
     }
 }
