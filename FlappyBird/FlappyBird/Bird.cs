@@ -8,13 +8,23 @@ namespace FlappyBird
 {
     class Bird : RotatingSpriteGameObject
     {
+        Vector2 StartScreen;
+
         public Bird() : base("spr_bird")
         {
             //TODO Check if origin is correct
             origin = new Vector2(sprite.Width, sprite.Height);
             this.Origin = origin;
-            Vector2 StartScreen = new Vector2(FlappyBird.Screen.X / 2, FlappyBird.Screen.Y / 2);
+            StartScreen = new Vector2(FlappyBird.Screen.X / 2, FlappyBird.Screen.Y / 2);           
 
+            this.Reset();
+        }
+
+        public override void Reset()
+        {
+            base.Reset();
+
+            this.Velocity = Vector2.Zero;
             this.Position = StartScreen;
         }
     }
