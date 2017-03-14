@@ -27,5 +27,13 @@ namespace FlappyBird
             this.Velocity = Vector2.Zero;
             this.Position = StartScreen;
         }
+
+        public override void Update(GameTime gameTime)
+        {
+            base.Update(gameTime);
+
+            this.velocity.Y += 20;
+            this.AngularDirection = new Vector2 (100, this.velocity.Y);
+        }
     }
 }
