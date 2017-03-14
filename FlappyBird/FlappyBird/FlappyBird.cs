@@ -28,13 +28,13 @@ namespace FlappyBird
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
             screen.X = 640;
             screen.Y = 480;
             SetFullScreen(false);
 
-            // TODO: use this.Content to load your game content here
+            gameStateManager.AddGameState("PlayingState", new PlayingState());
+            gameStateManager.SwitchTo("PlayingState");
         }
        
     }
