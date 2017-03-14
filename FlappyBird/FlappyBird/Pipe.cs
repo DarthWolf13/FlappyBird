@@ -8,7 +8,7 @@ namespace FlappyBird
 {
     class Pipe : SpriteGameObject
     {
-        int randomHeight = GameEnvironment.Random.Next(201);
+        int randomHeight = GameEnvironment.Random.Next(200, 401);
 
         public Pipe() : base("spr_pipe")
         {
