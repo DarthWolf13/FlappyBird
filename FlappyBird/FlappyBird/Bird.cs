@@ -13,9 +13,7 @@ namespace FlappyBird
 
         public Bird() : base("spr_bird")
         {
-            //TODO Check if origin is correct
-            origin = new Vector2(sprite.Width, sprite.Height);
-            this.Origin = origin;
+            origin = sprite.Center;
             StartScreen = new Vector2(FlappyBird.Screen.X / 2, FlappyBird.Screen.Y / 2);           
 
             this.Reset();
