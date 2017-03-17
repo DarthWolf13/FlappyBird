@@ -22,6 +22,13 @@ namespace FlappyBird
             this.Add(pipes);
         }
 
+        public void SetGameOver()
+        {
+            bird.Reset();
+            pipes.Objects.Clear();
+            FrameCounter = 0;
+        }
+
         public override void Update(GameTime gameTime)
         {
             base.Update(gameTime);
@@ -35,17 +42,15 @@ namespace FlappyBird
 
             Boolean IsGameOver = false;
             
-            if (bird.Position.Y > FlappyBird.Screen || bird.Position.Y < 0)
+            if (bird.Position.Y > FlappyBird.Screen.Y || bird.Position.Y < 0 || bird.CollidesWith(pipe))
             {
-
-            }                      
-        }
-
-        public void SetGameOver()
-        {
-            bird.Reset();
-            pipes.Objects.Clear();
-            FrameCounter = 0;
-        }
+                IsGameOver = true;
+            } 
+            
+            if (IsGameOver == true)
+            {
+                SetGameOver();
+            }                     
+        }      
     }
 }
