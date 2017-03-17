@@ -14,7 +14,7 @@ namespace FlappyBird
         public GameOverState()
         {
             this.text = new TextGameObject("GameFont");
-            this.text.Text = "Press \"space\" to return to the Title Screen";
+            this.text.Text = "Game Over";
             this.text.Position = new Vector2((FlappyBird.Screen.X / 2) - (this.text.Size.X / 2), (FlappyBird.Screen.Y / 2) - (this.text.Size.Y / 2));
 
             this.Add(text);

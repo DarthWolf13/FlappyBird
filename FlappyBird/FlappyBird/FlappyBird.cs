@@ -34,8 +34,8 @@ namespace FlappyBird
             SetFullScreen(false);
 
             gameStateManager.AddGameState("PlayingState", new PlayingState());
-            gameStateManager.AddGameState("TitleScreenState", new PlayingState());
-            gameStateManager.AddGameState("GameOverState", new PlayingState());
+            gameStateManager.AddGameState("TitleScreenState", new TitleScreenState());
+            gameStateManager.AddGameState("GameOverState", new GameOverState());
             gameStateManager.SwitchTo("TitleScreenState");
         }
        

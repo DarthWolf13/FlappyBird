@@ -27,11 +27,11 @@ namespace FlappyBird
 
         public void SetGameOver()
         {
-            FlappyBird.GameStateManager.SwitchTo("GameOverState");
             bird.Reset();
             pipes.Objects.Clear();
             FrameCounter = 0;
             score.ScoreValue = 0;
+            FlappyBird.GameStateManager.SwitchTo("GameOverState");
         }
 
         public override void Update(GameTime gameTime)
