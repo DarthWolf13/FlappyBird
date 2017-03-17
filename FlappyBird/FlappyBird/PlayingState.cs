@@ -27,6 +27,7 @@ namespace FlappyBird
 
         public void SetGameOver()
         {
+            FlappyBird.GameStateManager.SwitchTo("GameOverState");
             bird.Reset();
             pipes.Objects.Clear();
             FrameCounter = 0;

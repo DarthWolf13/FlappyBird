@@ -36,7 +36,7 @@ namespace FlappyBird
             gameStateManager.AddGameState("PlayingState", new PlayingState());
             gameStateManager.AddGameState("TitleScreenState", new PlayingState());
             gameStateManager.AddGameState("GameOverState", new PlayingState());
-            gameStateManager.SwitchTo("PlayingState");
+            gameStateManager.SwitchTo("TitleScreenState");
         }
        
     }
