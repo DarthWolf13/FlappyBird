@@ -42,11 +42,19 @@ namespace FlappyBird
 
             Boolean IsGameOver = false;
             
-            if (bird.Position.Y > FlappyBird.Screen.Y || bird.Position.Y < 0 || bird.CollidesWith(pipe))
+            if (bird.Position.Y > FlappyBird.Screen.Y || bird.Position.Y < 0)
             {
                 IsGameOver = true;
-            } 
-            
+            }
+
+            foreach (Pipe pipes in pipes.Objects)
+            {
+                if (bird.CollidesWith(pipes))
+                {
+                    IsGameOver = true;
+                }
+            }
+
             if (IsGameOver == true)
             {
                 SetGameOver();

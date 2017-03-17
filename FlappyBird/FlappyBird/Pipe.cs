@@ -14,7 +14,7 @@ namespace FlappyBird
         {
             this.velocity = new Vector2(-300, 0);
             origin = sprite.Center;
-            this.Position = new Vector2(700, randomHeight + 200);
+            this.Position = new Vector2(700, randomHeight);
         }
     }
 }
